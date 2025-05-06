@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+/* #region globals */
+:root {
+  --black: #333333;
+  --deepblack: #000000;
+  --red: #c82113;
+  --deepred: #94180e;
+  --blue: #1085df;
+  --deepblue: #0e5a94;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  margin: 0rem 1rem;
+}
+
+h3 {
+  font-family: bebas neue cursive, sans-serif;
+}
+
+h2 {
+  font-family: bebas neue;
+  color: var(--deepred);
+  font-size: 3rem;
+}
+
+h3 {
+  color: var(--deepblack);
+}
+
+p {
+  font-family: sofia sans condensed, sans-serif;
+  color: var(--black);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  color: var(--red);
+}
+/* #endregion  */
+
+/* #region header */
+
+#global-header {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+#hero {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+/* #endregion */
+
+/* #region nav  */
+
+nav {
+  margin-top: 0rem;
+  background-color: var(--deepblack);
+  color: white;
+}
+
+nav ul {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li {
+  padding: 0.5rem 0rem;
+  border-bottom: 1px solid white;
+}
+nav ul li:last-of-type {
+  border-bottom: none;
+}
+nav ul li a {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li:hover {
+  background-color: white;
+}
+
+nav ul li:hover a {
+  color: var(--black);
+}
+
+nav ul li:last-of-type a {
+  color: var(--blue);
+}
+
+/* #endregion  */
+
+/* #region section one */
+#section-one div {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#section-one div article {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+#section-one div article a {
+  position: absolute;
+  right: 1rem;
+}
+
+/* #endregion */
+
+/* #region section two  */
+
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 1rem;
+}
+
+.grid-item {
+  width: 100%;
+}
+/* #endregion */
+
+/* #region section three  */
+
+#section-three div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+#big-image {
+  width: 100%;
+}
+#thumbnail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.thumbnail {
+  width: 100%;
+}
+/* #endregion */
+
+/* #region footer */
+footer {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--black);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+
+footer h2 {
+  color: var(--blue);
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+footer p {
+  margin: 0rem;
+  color: #efefef;
+  font-size: 1.25rem;
+}
+footer ul {
+  margin-left: 1rem;
+  width: 100%;
+}
+
+#socials {
+  display: flex;
+  margin-left: 1rem;
+  gap: 1rem;
+}
+
+#socials li img {
+  max-width: 4rem;
+}
+
+/* #endregion  */
+
+/* #region queries  */
+
+/* #region screen */
+
+@media screen and (min-width: 1300px) {
+  #section-one div {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  #gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  #section-three div {
+    grid-template-columns: 1fr 1fr;
+  }
+  #thumbnail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* #endregion */
+
+/* #region tablet  */
+@media screen and (min-width: 769px) and (max-width: 1299px) {
+  #section-one div {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* #endregion */
+
+/* #endregion */
