@@ -9,9 +9,11 @@
   --blue: #1085df;
   --deepblue: #0e5a94;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -92,6 +94,8 @@ span {
 /* #region nav  */
 
 nav {
+  position: sticky;
+  top: 0;
   margin-top: 0rem;
   background-color: var(--deepblack);
   color: white;
@@ -110,6 +114,7 @@ nav ul li {
 nav ul li:last-of-type {
   border-bottom: none;
 }
+
 nav ul li a {
   width: 100%;
   color: white;
@@ -126,6 +131,39 @@ nav ul li:hover a {
 
 nav ul li:last-of-type a {
   color: var(--blue);
+}
+
+#kontakt-dialog {
+  background-color: var(--black);
+}
+
+#kontakt-dialog form fieldset {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#kontakt-dialog form input,
+textarea {
+  background-color: lightslategray;
+}
+
+#kontakt-dialog form div {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type='submit'] {
+  background-color: white;
+}
+
+input[type='reset'] {
+  background-color: var(--red);
 }
 
 /* #endregion  */
@@ -159,6 +197,18 @@ nav ul li:last-of-type a {
 .grid-item {
   width: 100%;
 }
+
+#imgDialog {
+  width: 50%;
+  height: auto;
+  background-color: #00000095;
+}
+
+#imgDialog img {
+  width: 100%;
+  height: 100%;
+}
+
 /* #endregion */
 
 /* #region section three  */
@@ -168,9 +218,11 @@ nav ul li:last-of-type a {
   grid-template-columns: 1fr;
   gap: 0.5rem;
 }
+
 #big-image {
   width: 100%;
 }
+
 #thumbnail-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -183,6 +235,7 @@ nav ul li:last-of-type a {
 /* #endregion */
 
 /* #region footer */
+
 footer {
   margin-top: 2rem;
   display: grid;
@@ -200,16 +253,31 @@ footer h2 {
   margin-top: 1rem;
   margin-bottom: 0.25rem;
 }
+
 footer p {
   margin: 0rem;
   color: #efefef;
   font-size: 1.25rem;
 }
+
 footer ul {
   margin-left: 1rem;
   width: 100%;
 }
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+footer ul:nth-child(1) li a p {
+  color: var(--blue);
+}
 
+footer figure {
+  margin-left: 1rem;
+}
+
+footer figure img {
+  width: 80%;
+}
 #socials {
   display: flex;
   margin-left: 1rem;
@@ -217,6 +285,7 @@ footer ul {
 }
 
 #socials li img {
+  margin-top: 2rem;
   max-width: 4rem;
 }
 
@@ -231,12 +300,15 @@ footer ul {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+
   #gallery-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   #section-three div {
     grid-template-columns: 1fr 1fr;
   }
+
   #thumbnail-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -245,8 +317,17 @@ footer ul {
     flex-direction: row;
     gap: 1rem;
   }
+
+  nav ul li {
+    border-bottom: none;
+  }
+
   footer {
     grid-template-columns: 1fr 1fr;
+  }
+
+  footer figure figcaption {
+    margin-left: 1rem;
   }
 }
 
@@ -254,22 +335,40 @@ footer ul {
 
 /* #region tablet  */
 @media screen and (min-width: 769px) and (max-width: 1299px) {
-  #section-one div {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #gallery-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   nav ul {
     flex-direction: row;
     gap: 1rem;
     justify-content: flex-end;
     margin-right: 1rem;
   }
+
+  nav ul li {
+    border-bottom: none;
+  }
+
+  #section-one div {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  #gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #section-three div {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #thumbnail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   footer {
     grid-template-columns: 1fr 1fr;
+  }
+
+  footer figure figcaption {
+    margin-left: 1rem;
   }
 }
 /* #endregion */

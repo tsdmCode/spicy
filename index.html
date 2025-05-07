@@ -18,8 +18,27 @@
         <li><a href="#section-one">OM SPICY</a></li>
         <li><a href="#section-two">GALLERY</a></li>
         <li><a href="#section-three">FAVORIT</a></li>
-        <li><a href="">KONTAKT</a></li>
+        <li><a href="" onclick="openForm(event)">KONTAKT</a></li>
       </ul>
+      <dialog id="kontakt-dialog">
+        <form action="">
+          <fieldset>
+            <legend>Kontakt</legend>
+            <label for="Navn">Navn</label>
+            <input type="text" name="Navn" required />
+            <label for="email">Email</label>
+            <input type="email" required />
+            <label for="number">Nummer</label>
+            <input type="number" name="number" required />
+            <label for="kommentar">Besked:</label>
+            <textarea name="kommentar" id=""></textarea>
+            <div>
+              <input type="submit" />
+              <input type="reset" />
+            </div>
+          </fieldset>
+        </form>
+      </dialog>
     </nav>
     <main>
       <section id="section-one">
@@ -73,6 +92,9 @@
           <img src="./assets/images/Product/Chili-04.jpg" alt="" class="grid-item" />
           <img src="./assets/images/Product/Chili-05.jpg" alt="" class="grid-item" />
           <img src="./assets/images/Product/Chili-06.jpg" alt="" class="grid-item" />
+          <dialog id="imgDialog">
+            <img id="dialogImg" src="" alt="" />
+          </dialog>
         </div>
       </section>
       <section id="section-three">
@@ -89,7 +111,7 @@
       </section>
     </main>
     <footer>
-      <ul>
+      <ul id="kontakt-list">
         <li><h2>KONTAKT SPICY:</h2></li>
         <li>
           <p>
@@ -100,8 +122,12 @@
         </li>
         <li><p>Boulevarden 39</p></li>
         <li><p>9000 Aalborg</p></li>
-        <li><a href="mailto:blabla@bla.com">Send os en mail:</a></li>
-        <li><a href="tel:12345678">Ring til os:</a></li>
+        <li>
+          <a href="mailto:blabla@bla.com"><p>Send os en mail:</p></a>
+        </li>
+        <li>
+          <a href="tel:12345678"><p>Ring til os:</p></a>
+        </li>
         <li>
           <ul id="socials">
             <li>
@@ -116,16 +142,15 @@
           </ul>
         </li>
       </ul>
-      <ul>
-        <li><h2>GOOGLE MAPS:</h2></li>
-        <li>
-          <a
-            href="https://www.google.com/maps/place/Boulevarden+39,+9000+Aalborg/@57.0436703,9.9161972,16z/data=!3m1!4b1!4m6!3m5!1s0x464932f3bcda26e3:0xcd44aae1c87a63c5!8m2!3d57.0436674!4d9.9187721!16s%2Fg%2F11bw3x3m1y?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D"
-          >
-            <img src="./assets/images/google maps.png" alt="" />
-          </a>
-        </li>
-      </ul>
+      <figure>
+        <figcaption><h2>GOOGLE MAPS:</h2></figcaption>
+
+        <a
+          href="https://www.google.com/maps/place/Boulevarden+39,+9000+Aalborg/@57.0436703,9.9161972,16z/data=!3m1!4b1!4m6!3m5!1s0x464932f3bcda26e3:0xcd44aae1c87a63c5!8m2!3d57.0436674!4d9.9187721!16s%2Fg%2F11bw3x3m1y?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D"
+        >
+          <img src="./assets/images/google maps.png" alt="" />
+        </a>
+      </figure>
     </footer>
   </body>
 </html>
