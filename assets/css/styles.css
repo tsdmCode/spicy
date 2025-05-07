@@ -169,11 +169,11 @@ input[type='number'] {
 }
 
 input[type='submit'] {
-  background-color: white;
+  background-color: white !important;
 }
 
 input[type='reset'] {
-  background-color: var(--red);
+  background-color: var(--red) !important;
 }
 
 /* #endregion  */
@@ -322,7 +322,7 @@ footer figure {
   }
 
   #gallery-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   #section-three div {
