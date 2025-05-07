@@ -96,6 +96,8 @@ nav {
   margin-top: 0rem;
   background-color: var(--deepblack);
   color: white;
+  font-family: bebas neue;
+  font-size: 1.25rem;
 }
 
 nav ul {
@@ -105,7 +107,7 @@ nav ul {
 }
 
 nav ul li {
-  padding: 0.5rem 0rem;
+  padding: 0.25rem 0rem;
   border-bottom: 1px solid white;
 }
 nav ul li:last-of-type {
@@ -114,8 +116,8 @@ nav ul li:last-of-type {
 
 nav ul li a {
   width: 100%;
-  color: white;
-  font-weight: bold;
+  color: #efefef;
+  font-weight: normal;
 }
 
 nav ul li:hover {
